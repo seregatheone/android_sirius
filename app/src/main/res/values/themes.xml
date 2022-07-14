@@ -13,31 +13,72 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-<!--    <style name="ButtonStyle">-->
-<!--        <item name="fontFamily">@font/sk_modernist_bold/</item>-->
-<!--        <item name="android:textColor">@color/background_text_color</item>-->
-<!--        <item name="android:background">@color/button_color</item>-->
-<!--    </style>-->
+    <style name="ButtonText">
+        <item name="fontFamily">@font/sk_modernist_bold</item>
+        <item name="android:textColor">@color/background_text_color</item>
+        <item name="android:textSize">@dimen/install_button_text_dimen</item>
+    </style>
 
-<!--    <style name="CommentText">-->
-<!--        <item name="fontFamily">@font/sk_modernist_regular/</item>-->
-<!--        <item name="android:textColor">@color/comment_text_color</item>-->
-<!--    </style>-->
+    <style name="CategoryStyle">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/category_text_color</item>
+        <item name="android:textSize">@dimen/category_text_dimen</item>
+    </style>
 
-<!--    <style name="CommentDate">-->
-<!--        <item name="fontFamily">@font/sk_modernist_regular/</item>-->
-<!--        <item name="android:textColor">@color/comment_date_color</item>-->
-<!--    </style>-->
+    <style name="TitleStyle">
+        <item name="fontFamily">@font/sk_modernist_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/title_text_dimen</item>
+    </style>
 
-<!--    <style name="CommentAuthor">-->
-<!--        <item name="fontFamily">@font/sk_modernist_regular/</item>-->
-<!--        <item name="android:textColor">@color/names_text_color</item>-->
-<!--    </style>-->
+    <style name="DownloadsStyle">
+        <item name="fontFamily">@font/sk_modernist_bold</item>
+        <item name="android:textColor">@color/downloads_color</item>
+        <item name="android:textSize">@dimen/downloads_text_dimen</item>
+    </style>
 
-<!--    <style name="ReviewAndRating">-->
-<!--        <item name="fontFamily">@font/sk_modernist_bold/</item>-->
-<!--        <item name="android:textColor">@color/review_and_rating_color</item>-->
-<!--    </style>-->
+    <style name="DescriptionStyle">
+        <item name="fontFamily">@font/sk_modernist_regular</item>
+        <item name="android:textColor">@color/description_text_color</item>
+        <item name="android:textSize">@dimen/description_text_dimen</item>
+    </style>
 
+    <style name="ReviewAndRating">
+        <item name="fontFamily">@font/sk_modernist_bold</item>
+        <item name="android:textColor">@color/review_and_rating_color</item>
+        <item name="android:textSize">@dimen/review_rating_text_dimen</item>
+    </style>
+
+    <style name="FloatNumber">
+        <item name="fontFamily">@font/sk_modernist_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/rating_dimen</item>
+    </style>
+
+    <style name="TextViewReviews">
+        <item name="fontFamily">@font/sk_modernist_bold</item>
+        <item name="android:textColor">@color/comment_text_color</item>
+        <item name="android:textSize">@dimen/downloads_text_dimen</item>
+    </style>
+
+    <style name="CommentText">
+        <item name="fontFamily">@font/sk_modernist_regular</item>
+        <item name="android:textColor">@color/comment_text_color</item>
+        <item name="android:textSize">@dimen/comment_text_dimen</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="CommentDate">
+        <item name="fontFamily">@font/sk_modernist_regular</item>
+        <item name="android:textColor">@color/comment_date_color</item>
+        <item name="android:textSize">@dimen/comment_date_dimen</item>
+    </style>
+
+    <style name="CommentAuthor">
+        <item name="fontFamily">@font/sk_modernist_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/comment_author_text_dimen</item>
+    </style>
 
 </resources>

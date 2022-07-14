@@ -20,7 +20,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -101,7 +102,10 @@
                     app:layout_constraintTop_toBottomOf="@+id/spacer"/>
 
                 <TextView
+                    style="@style/DescriptionStyle"
                     android:id="@+id/description"
+                    android:lineSpacingExtra="2dp"
+                    android:letterSpacing="0.1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/average_margin"
@@ -112,6 +116,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/categoryRecView"
                     />
                 <TextView
+                    style="@style/ReviewAndRating"
                     android:id="@+id/reviewRating"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -131,9 +136,10 @@
                     app:layout_constraintTop_toBottomOf="@+id/reviewRating">
 
                     <TextView
+                        style="@style/FloatNumber"
                         android:id="@+id/floatRating"
                         android:layout_width="wrap_content"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -147,6 +153,7 @@
                         app:layout_constraintTop_toTopOf="@id/floatRating" />
 
                     <TextView
+                        style="@style/TextViewReviews"
                         android:id="@+id/textViewReviews"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -160,6 +167,7 @@
                         android:layout_width="0dp"
                         android:layout_height="3dp"
 
+                        android:layout_marginTop="@dimen/lowest_margin"
                         android:layout_marginRight="@dimen/average_margin"
                         android:layout_marginLeft="@dimen/average_margin"
 
@@ -190,7 +198,8 @@
             android:layout_height="wrap_content"
             android:baselineAlignBottom="false"
             app:layout_anchor="@id/appbar"
-            app:layout_anchorGravity="left|bottom">
+            app:layout_anchorGravity="left|bottom|start"
+            >
 
             <ImageView
                 android:id="@+id/icon"
@@ -199,11 +208,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="20dp"
                 tools:src="@tools:sample/avatars"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
+                style="@style/TitleStyle"
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -221,6 +230,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/title" />
 
             <TextView
+                style="@style/DownloadsStyle"
                 android:id="@+id/downloads"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -232,15 +242,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <Button
+        style="@style/ButtonText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="36dp"
         android:background="@color/button_color"
+        android:foregroundTintMode="src_in"
         android:text="@string/install"
-        android:textColor="@color/background_text_color"
-        android:textStyle="bold"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="icon_size">84dp</dimen>
+    <dimen name="icon_size">120dp</dimen>
     <dimen name="half_icon_size">42dp</dimen>
 
     <dimen name="comment_text_dimen">12dp</dimen>
     <dimen name="comment_date_dimen">12dp</dimen>
     <dimen name="comment_author_text_dimen">16dp</dimen>
+
+    <dimen name="author_icon_size">36dp</dimen>
 
     <dimen name="rating_dimen">48dp</dimen>
 
@@ -14,4 +16,12 @@
     <dimen name="biggest_margin">36dp</dimen>
 
     <dimen name="star_dimen">14dp</dimen>
+    <dimen name="category_text_dimen">10dp</dimen>
+
+    <dimen name="downloads_text_dimen">12dp</dimen>
+
+    <dimen name="description_text_dimen">12dp</dimen>
+
+    <dimen name="review_rating_text_dimen">16dp</dimen>
+
 </resources>

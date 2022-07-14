@@ -1,7 +1,6 @@
 package com.sirius.test_app.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,13 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.bumptech.glide.Priority
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.request.RequestOptions
-import com.sirius.test_app.R
 import com.sirius.test_app.databinding.FragmentMainScreenBinding
 import com.sirius.test_app.domain.MainScreenViewModel
+import com.sirius.test_app.ui.recViewAdapters.CategoryRecViewAdapter
+import com.sirius.test_app.ui.recViewAdapters.CommentsRecViewAdapter
+import com.sirius.test_app.ui.recViewAdapters.RatingRecViewAdapter
 import kotlin.math.roundToInt
 
 class MainScreenFragment : Fragment() {

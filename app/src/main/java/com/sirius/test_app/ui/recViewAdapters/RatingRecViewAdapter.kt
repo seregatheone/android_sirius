@@ -1,4 +1,4 @@
-package com.sirius.test_app.ui
+package com.sirius.test_app.ui.recViewAdapters
 
 import android.view.LayoutInflater
 import android.view.View

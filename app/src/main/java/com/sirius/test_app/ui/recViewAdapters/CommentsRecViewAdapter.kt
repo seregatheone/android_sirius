@@ -1,4 +1,4 @@
-package com.sirius.test_app.ui
+package com.sirius.test_app.ui.recViewAdapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -36,6 +36,8 @@ class CommentsRecViewAdapter(private val context : Context): RecyclerView.Adapte
         Glide.with(context)
             .load(currentItem.userImage)
             .into(authorImage)
+
+        authorImage.clipToOutline = true
     }
 
     override fun getItemCount(): Int = reviewModel.size
