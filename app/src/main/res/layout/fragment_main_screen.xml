@@ -1,9 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.MainScreenFragment">
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_text_color">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@tools:sample/avatars" />
+                    <ImageView
+                        android:layout_width="@dimen/floating_buttons_dimen"
+                        android:layout_height="@dimen/floating_buttons_dimen"
+
+                        android:layout_marginStart="@dimen/floating_buttons_margin_start_dimen"
+
+                        android:layout_marginTop="@dimen/floating_buttons_dimen"
+                        android:clickable="true"
+
+                        android:focusable="true"
+                        android:src="@drawable/floating_button_back"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/floating_buttons_dimen"
+
+                        android:layout_height="@dimen/floating_buttons_dimen"
+
+                        android:layout_marginTop="@dimen/floating_buttons_dimen"
+                        android:layout_marginEnd="@dimen/floating_buttons_margin_start_dimen"
+
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/floating_button_more"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/lowest_margin"
+            android:layout_marginRight="@dimen/lowest_margin"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_text_color"
+                tools:context=".ui.MainScreenFragment">
+                <Space
+                    android:id="@+id/spacer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/half_icon_size"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categoryRecView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spacer"/>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/average_margin"
+                    android:layout_marginLeft="@dimen/lowest_margin"
+                    android:layout_marginRight="@dimen/lowest_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/categoryRecView"
+                    />
+                <TextView
+                    android:id="@+id/reviewRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description"
+                    android:layout_marginTop="@dimen/average_margin"
+                    android:text="@string/review_amp_ratings"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrReviewAndRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="@dimen/average_margin"
+                    app:layout_constraintTop_toBottomOf="@+id/reviewRating">
+
+                    <TextView
+                        android:id="@+id/floatRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewReviews"
+                        app:layout_constraintStart_toEndOf="@id/floatRating"
+                        app:layout_constraintTop_toTopOf="@id/floatRating" />
+
+                    <TextView
+                        android:id="@+id/textViewReviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@id/floatRating"
+                        app:layout_constraintStart_toEndOf="@id/floatRating"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerViewRating"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <View
+                        android:id="@+id/lineSpacer"
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"
+
+                        android:layout_marginRight="@dimen/average_margin"
+                        android:layout_marginLeft="@dimen/average_margin"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/constrReviewAndRating"
+
+                        android:background="#1A1F29"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/commentsRecView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lineSpacer"
+                        />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAlignBottom="false"
+            app:layout_anchor="@id/appbar"
+            app:layout_anchorGravity="left|bottom">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="20dp"
+                tools:src="@tools:sample/avatars"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <TextView
+                android:id="@+id/downloads"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rating"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="36dp"
+        android:background="@color/button_color"
+        android:text="@string/install"
+        android:textColor="@color/background_text_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

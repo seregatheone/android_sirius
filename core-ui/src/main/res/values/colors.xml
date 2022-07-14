@@ -8,6 +8,10 @@
 
     <color name="names_text_color">#FFFFFF</color>
 
+    <color name="floating_button_color">#47FFFFFF</color>
+
+    <color name="review_and_rating_color">#EEF2FB</color>
+
     <color name="comment_text_color">#A8ADB7</color>
     <color name="comment_date_color">#66FFFFFF</color>
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icon_size">84dp</dimen>
+    <dimen name="half_icon_size">42dp</dimen>
+
+    <dimen name="comment_text_dimen">12dp</dimen>
+    <dimen name="comment_date_dimen">12dp</dimen>
+    <dimen name="comment_author_text_dimen">16dp</dimen>
+
+    <dimen name="rating_dimen">48dp</dimen>
+
+    <dimen name="lowest_margin">12dp</dimen>
+    <dimen name="average_margin">20dp</dimen>
+    <dimen name="biggest_margin">36dp</dimen>
+
+    <dimen name="star_dimen">14dp</dimen>
+</resources>

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Sirius" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Sirius" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,4 +13,31 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+<!--    <style name="ButtonStyle">-->
+<!--        <item name="fontFamily">@font/sk_modernist_bold/</item>-->
+<!--        <item name="android:textColor">@color/background_text_color</item>-->
+<!--        <item name="android:background">@color/button_color</item>-->
+<!--    </style>-->
+
+<!--    <style name="CommentText">-->
+<!--        <item name="fontFamily">@font/sk_modernist_regular/</item>-->
+<!--        <item name="android:textColor">@color/comment_text_color</item>-->
+<!--    </style>-->
+
+<!--    <style name="CommentDate">-->
+<!--        <item name="fontFamily">@font/sk_modernist_regular/</item>-->
+<!--        <item name="android:textColor">@color/comment_date_color</item>-->
+<!--    </style>-->
+
+<!--    <style name="CommentAuthor">-->
+<!--        <item name="fontFamily">@font/sk_modernist_regular/</item>-->
+<!--        <item name="android:textColor">@color/names_text_color</item>-->
+<!--    </style>-->
+
+<!--    <style name="ReviewAndRating">-->
+<!--        <item name="fontFamily">@font/sk_modernist_bold/</item>-->
+<!--        <item name="android:textColor">@color/review_and_rating_color</item>-->
+<!--    </style>-->
+
+
 </resources>
